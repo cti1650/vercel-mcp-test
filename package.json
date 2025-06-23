@@ -1,14 +1,16 @@
 {
-  "name": "local-mcp-test",
+  "name": "vercel-mcp-test",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "local-mcp-test": "./build/index.js"
+    "vercel-mcp-test": "./build/index.js"
   },
   "scripts": {
-    "build": "tsc && chmod 755 build/index.js",
+    "build": "npm run build:bin && npm run build:api",
+    "build:bin": "tsc && chmod 755 build/index.js",
+    "build:api": "tsc -p tsconfig.api.json",
     "prepare": "npm run build"
   },
   "files": [
@@ -19,6 +21,7 @@
   "license": "ISC",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",
+    "@vercel/mcp-adapter": "^0.11.1",
     "zod": "^3.25.56"
   },
   "devDependencies": {

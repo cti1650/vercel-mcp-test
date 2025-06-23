@@ -14,9 +14,9 @@ On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
 ```json:claude_desktop_config.json
 {
   "mcpServers": {
-    "local-mcp-test": {
+    "vercel-mcp-test": {
       "command": "npx",
-      "args": ["github:cti1650/local-mcp-test"]
+      "args": ["github:cti1650/vercel-mcp-test"]
     }
   }
 }
