@@ -1,8 +1,16 @@
 {
   "buildCommand": "npm run build:api",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/server.ts"
+    }
+  ],
   "functions": {
-    "api/**/*.js": {
-      "runtime": "@vercel/node"
+    "api/server.ts": {
+      "maxDuration": 10,
+      "memory": 512,
+      "runtime": "nodejs20.x"
     }
   }
 }
