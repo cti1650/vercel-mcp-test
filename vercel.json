@@ -1,9 +1,8 @@
 {
-  "version": 2,
-  "buildCommand": "tsc -p tsconfig.api.json",
+  "buildCommand": "npm run build:api",
   "functions": {
     "api/**/*.js": {
-      "runtime": "nodejs22.x"
+      "runtime": "@vercel/node"
     }
   }
 }
